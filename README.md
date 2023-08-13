@@ -128,7 +128,8 @@ If you like this project, give it a ⭐.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Microverse](https://www.microverse.org/) for giving this opportunity to learn.
+I would like to thank [Microverse](https://www.microverse.org/) for giving this opportunity to learn.<br>
+The design guidelines are inspired from [Gregoire Vella](https://www.behance.net/gregoirevella).<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
