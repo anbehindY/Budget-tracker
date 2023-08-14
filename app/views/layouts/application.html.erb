@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -13,10 +14,17 @@
 
   <body>
     <div>
-      <p><%= notice %></p>
-      <p><%= alert %></p>
+      <small><%= notice %></small>
+      <small><%= alert %></small>
     </div>
-    <main class="container mx-auto mt-28 px-5 flex">
+      <% if user_signed_in? %>
+        <nav class="flex justify-end px-4 py-2">
+          <%= link_to "Sign Out", destroy_user_session_path %>
+        </nav>
+      <% end %>
+
+
+    <main class="container mx-auto h-full flex items-center">
       <%= yield %>
     </main>
   </body>
