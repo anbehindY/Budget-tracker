@@ -81,6 +81,11 @@ Create the database by running the following command:
 rails db:create
 ```
 
+Precompile assets (especially for tailwind css) with the following command:
+```sh
+rails assets:precompile
+```
+
 Load the database schema with this command:
 
 ```sh
