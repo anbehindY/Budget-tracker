@@ -5,8 +5,8 @@
       <% @categories.each do |category| %>
         <div class="container flex justify-between px-4 items-center w-11/12 h-20 bg-white mx-4">
           <img src="<%= category.icon %>" class="w-12 h-12" />
-          <p><%= category.name %></p>
-          <p>amount</p>
+          <p><%= link_to category.name, category_path(category), class: "hover:text-sky-400" %></p>
+          <p><%= category.bills.map { |bill| bill.amount }.sum %>$</p>
         </div>
       <% end %>
     </div>

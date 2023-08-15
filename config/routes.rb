@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  root 'category#index'
+  root 'categories#index'
   devise_for :users
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy'     
   end
-  resources :category do
-    resources :bill
+  resources :categories do
+    resources :bills, only: [:new, :create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

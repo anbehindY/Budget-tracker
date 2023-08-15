@@ -1,7 +1,12 @@
-class CategoryController < ApplicationController
+class CategoriesController < ApplicationController
   def index
     return unless user_signed_in?
-    @categories = current_user.categories
+    @categories = current_user.categories.includes(:bills)
+  end
+
+  def show
+    @category = Category.find(params[:id])
+    @bills = @category.bills
   end
 
   def new
@@ -13,7 +18,7 @@ class CategoryController < ApplicationController
     if @category.save
       redirect_to category_index_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
